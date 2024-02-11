@@ -1,0 +1,129 @@
+ kubectl get node
+    2  kubectl get namespace
+    3  kubectl create namespace clarus-namespace
+    4  kubectl get ns
+    5  kubectl create deployment default-ns --image=nginx
+    6  kubectl get deployment
+    7  kubectl get ns
+    8  kubectl create deployment clarus-ns --image=nginx -n=clarus-namespace
+    9  kubectl get deploy
+   10  kubectl get deploy -n clarus-namespace
+   11  kubectl get po -o wide
+   12  kubectl get po -o wide -n clarus-namespace
+   13  kubectl get po -o wide --all-namespaces
+   14  kubectl get po -o wide -A
+   15  kubectl get ns
+   16  kubectl get po -n kube-system
+   17  kubectl apply -f mydeployment.yaml 
+   18  kubectl get deploy
+   19  kubectl apply -f mydeployment.yaml 
+   20  kubectl get deploy
+   21  kubectl get deploy -n clarus-namespace
+   22  kubectl apply -f mydeployment.yaml 
+   23  kubectl delete -f .
+   24  kubectl delete namespace clarus-namespace
+   25  kubectl get deploy
+   26  kubectl delete deploy defauşt-ns
+   27  kubectl delete deploy default-ns
+   28  kubectl delete deploy nginx-deployment
+   29  kubectl get deploy
+   30  kubectl apply -f mydeployment.yaml 
+   31  clear
+   32  mkdir deployment-lesson
+   33  cd deployment-lesson
+   34  kubectl apply -f mydeploy.yaml 
+   35  kubectl get deploy
+   36  kubectl get deploy -l app=myapp
+   37  kubectl describe deploy mydeploy
+   38  clear
+   39  kubectl rollout --help
+   40  kubectl rollout history deploy mydeploy
+   41  kubectl rollout history deploy mydeploy --revision=1
+   42  clear
+   43  kubectl set --help
+   44  kubectl set image deploy mydeploy mycontainer=clarusway/clarusweb:2.0
+   45  kubectl get deploy
+   46  kubectl rollout history deploy mydeploy
+   47  kubectl rollout history deploy mydeploy --revision=1
+   48  kubectl rollout history deploy mydeploy --revision=2
+   49  kubectl describe deploy mydeploy | grep -i image
+   50  kubectl rollout history deploy mydeploy
+   51  kubectl get rs
+   52  kubectl get deploy
+   53  kubectl get rs
+   54  kubectl rollout undo deploy mydeploy --to-revision=1
+   55  kubectl rollout status deploy mydeploy 
+   56  kubectl get rs
+   57  kubectl get deploy
+   58  kubectl rollout history deploy mydeploy
+   59  kubectl rollout history deploy mydeploy --revision=2
+   60  kubectl rollout history deploy mydeploy --revision=3
+   61  kubectl rollout history deploy mydeploy --revision=1
+   62  kubectl delete deploy -l app=myapp
+   63  kubectl get deploy
+   64  kubectl apply -f mydeploy.yaml 
+   65  kubectl get deploy
+   66  kubectl get rs
+   67  kubectl rollout history deploy mydeploy 
+   68  kubectl apply -f mydeploy.yaml 
+   69  kubectl get deploy
+   70  kubectl get deploy -w
+   71  kubectl get rs
+   72  kubectl rollout history deploy mydeploy 
+   73  kubectl apply -f mydeploy.yaml 
+   74  kubectl rollout history deploy mydeploy 
+   75  kubectl get rs
+   76  kubectl rollout undo deploy mydeploy 
+   77  kubectl rollout history deploy mydeploy 
+   78  kubectl rollout undo deploy mydeploy --revision=1
+   79  kubectl rollout undo deploy mydeploy --to-revision=1
+   80  kubectl rollout history deploy mydeploy 
+   81  kubectl get rs
+   82  kubectl rollout history deploy mydeploy 
+   83  kubectl rollout undo deploy mydeploy --to-revision=1
+   84  kubectl rollout undo deploy mydeploy --to-revision=4
+   85  kubectl rollout history deploy mydeploy 
+   86  clear
+   87  kubectl delete deploy
+   88  kubectl delete -f mydeploy.yaml 
+   89  kubectl apply -f mydeploy.yaml 
+   90  kubectl get deploy
+   91  kubectl expose deploy mydeploy.yaml --port=80 --type NodePort
+   92  kubectl expose deploy mydeploy --port=80 --type NodePort
+   93  kubectl get svc
+   94  kubectl get po
+   95  kubectl apply -f mydeploy.yaml 
+   96  kubectl get po
+   97  watch kubectl get po
+   98  kubectl apply -f mydeploy.yaml 
+   99  watch kubectl get po
+  100  kubectl apply -f mydeploy.yaml 
+  101  watch kubectl get po
+  102  kubectl delete -f mydeploy.yaml 
+  103  kubectl apply -f mydeploy.yaml 
+  104  kubectl get deploy
+  105  kubectl apply -f mydeploy.yaml 
+  106  kubectl get po
+  107  kubectl apply -f mydeploy.yaml 
+  108  kubectl delete -f mydeploy.yaml 
+  109  kubectl apply -f mydeploy.yaml 
+  110  kubectl get po
+  111  kubectl get rs
+  112  kubectl apply -f mydeploy.yaml 
+  113  kubectl delete -f mydeploy.yaml 
+  114  kubectl apply -f mydeploy.yaml 
+  115  kubectl get po
+  116  watch kubectl rs
+  117  watch kubectl get rs
+  118  kubectl apply -f mydeploy.yaml 
+  119  watch kubectl get rs
+  120  kubectl delete -f 
+  121  kubectl delete -f .
+  122  kubectl apply -f mydeploy.yaml 
+  123  kubectl rollout history deploy mydeploy
+  124  kubectl delete -f .
+  125  kubectl apply -f mydeploy.yaml 
+  126  kubectl rollout history deploy mydeploy
+  127  kubectl apply -f mydeploy.yaml 
+  128  kubectl rollout history deploy mydeploy
+  129  history
